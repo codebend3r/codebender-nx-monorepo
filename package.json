@@ -2,7 +2,9 @@
   "name": "@codebender-nx-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "npx nx run-many -t build"
+  },
   "private": true,
   "devDependencies": {
     "@emotion/babel-plugin": "11.11.0",
