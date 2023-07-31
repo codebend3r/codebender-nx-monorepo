@@ -13,10 +13,10 @@ const nextConfig = {
     svgr: false,
   },
 
-  compiler: {
-    // For other options, see https://nextjs.org/docs/architecture/nextjs-compiler#emotion
-    emotion: true,
-  },
+  // compiler: {
+  //   // For other options, see https://nextjs.org/docs/architecture/nextjs-compiler#emotion
+  //   emotion: true,
+  // },
 };
 
 const plugins = [
