@@ -39,10 +39,6 @@
     ],
     "sharedGlobals": []
   },
-  "workspaceLayout": {
-    "appsDir": "packages",
-    "libsDir": "packages"
-  },
   "generators": {
     "@nx/react": {
       "application": {
@@ -61,7 +57,7 @@
     },
     "@nx/next": {
       "application": {
-        "style": "@emotion/styled",
+        "style": "scss",
         "linter": "eslint"
       }
     }

@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@codebender-nx-monorepo/cb-utils-lib": [
-        "packages/cb-utils-lib/src/index.ts"
-      ]
+      "@codebender/cb-utils-lib": ["libs/cb-utils-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

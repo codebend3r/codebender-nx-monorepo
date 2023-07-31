@@ -1,28 +1,32 @@
 {
   "name": "cb-utils-lib",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/cb-utils-lib/src",
+  "sourceRoot": "libs/cb-utils-lib/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/cb-utils-lib"
+        "outputPath": "dist/libs/cb-utils-lib",
+        "main": "libs/cb-utils-lib/src/index.ts",
+        "tsConfig": "libs/cb-utils-lib/tsconfig.lib.json",
+        "assets": ["libs/cb-utils-lib/*.md"],
+        "generatePackageJson": true
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/cb-utils-lib/**/*.ts"]
+        "lintFilePatterns": ["libs/cb-utils-lib/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/cb-utils-lib/jest.config.ts",
+        "jestConfig": "libs/cb-utils-lib/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

@@ -2,7 +2,6 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -19,15 +18,7 @@
     ],
     "types": ["jest", "node"]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "../../packages/cb-next-js-app/.next/types/**/*.ts",
-    "../../dist/packages/cb-next-js-app/.next/types/**/*.ts",
-    "next-env.d.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
     "node_modules",
     "jest.config.ts",
